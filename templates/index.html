@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy-LLM 语音版 · 适合网页 TTS 的在线文档</title>
+<meta name="description" content="把 Datawhale《Happy-LLM：从零开始的大语言模型》教程转换成适合浏览器 TTS 朗读的在线文档：代码块自动跳过、公式口语化、表格线性化、逐句高亮、记忆进度。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+<link rel="stylesheet" href="%%ROOT%%assets/style.css">
+</head>
+<body data-page="index">
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="%%ROOT%%index.html">
+      <span class="brand-ico">🎧</span>
+      <span class="brand-txt"><b>Happy-LLM</b><i>语音版 · TTS Friendly</i></span>
+    </a>
+    %%NAV%%
+    <div class="side-foot">
+      <a href="https://github.com/datawhalechina/happy-llm" target="_blank" rel="noopener">原书仓库 ↗</a>
+      <a href="https://github.com/nongsia/hello-llm-tts" target="_blank" rel="noopener">本项目 ↗</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menu-btn" aria-label="打开目录">☰</button>
+      <div class="crumb">Happy-LLM · 语音版</div>
+      <button class="icon-btn" id="theme-btn" aria-label="切换深浅色">◐</button>
+    </header>
+
+    <article class="article home">
+      <section class="hero">
+        <h1>🎧 《Happy-LLM》语音版</h1>
+        <p class="lead">把 Datawhale 开源教程《Happy-LLM：从零开始的大语言模型》全书 8 章
+        转换成<b>适合浏览器 TTS 朗读</b>的在线文档——像听播客一样“读”完一本书，
+        也可以随时回到文字对照公式与代码。</p>
+        <div class="hero-stats">全书朗读约 <b>%%TOTAL%%</b> 分钟 · 无需安装任何插件，点开即听</div>
+        <ol class="howto">
+          <li>进入任意章节，点击底部工具条的 <b>▶</b> 开始朗读；</li>
+          <li>正在朗读的句子会<b>自动高亮并跟随滚动</b>，空格键可暂停 / 继续；</li>
+          <li>用 <b>⚡</b> 调语速、<b>🎙</b> 换音色（推荐 Edge 浏览器的中文在线音色）；</li>
+          <li>代码块朗读时<b>自动跳过</b>，公式读作口语（如“西格玛等于求和……”），进度自动记忆。</li>
+        </ol>
+      </section>
+
+      <section class="cards">
+%%CARDS%%
+      </section>
+
+      <section class="notes">
+        <h2>转换说明</h2>
+        <ul>
+          <li><b>代码块</b>：折叠为可展开面板，朗读自动跳过，视觉上保留全部代码；</li>
+          <li><b>数学公式</b>：页面显示 Unicode 符号版，朗读时转为口语（α 读“阿尔法”、Σ 读“求和”、上标 T 读“的转置”）；</li>
+          <li><b>表格</b>：保留表格外观，朗读时按“第 N 行：列名 为 值”线性化；</li>
+          <li><b>图片</b>：保留原书配图，朗读时只读图注；</li>
+          <li><b>进度</b>：每页朗读位置本地记忆，可勾选“连播”自动进入下一章。</li>
+        </ul>
+        <p class="license-note">原书采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+        协议，本项目同样以该协议分享，仅供非商业学习使用。朗读效果取决于系统 TTS 引擎，
+        推荐 Edge / Chrome + 中文语音包。</p>
+      </section>
+    </article>
+
+    <footer class="foot">
+      <p>内容转换自 <a href="https://github.com/datawhalechina/happy-llm" target="_blank" rel="noopener">Datawhale《Happy-LLM》</a>（CC BY-NC-SA 4.0），
+      仅供个人非商业学习。</p>
+    </footer>
+  </main>
+</div>
+<div class="sidebar-mask" id="sidebar-mask" hidden></div>
+<script src="%%ROOT%%assets/app.js"></script>
+</body>
+</html>

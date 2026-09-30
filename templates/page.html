@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>%%TITLE%% · Happy-LLM 语音版</title>
+<meta name="description" content="%%DESC%%">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+<link rel="stylesheet" href="%%ROOT%%assets/style.css">
+</head>
+<body data-page="%%PAGEKEY%%">
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="%%ROOT%%index.html">
+      <span class="brand-ico">🎧</span>
+      <span class="brand-txt"><b>Happy-LLM</b><i>语音版 · TTS Friendly</i></span>
+    </a>
+    %%NAV%%
+    <div class="side-foot">
+      <a href="https://github.com/datawhalechina/happy-llm" target="_blank" rel="noopener">原书仓库 ↗</a>
+      <a href="https://github.com/nongsia/hello-llm-tts" target="_blank" rel="noopener">本项目 ↗</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menu-btn" aria-label="打开目录">☰</button>
+      <div class="crumb">Happy-LLM · %%TITLE%%</div>
+      <button class="icon-btn" id="theme-btn" aria-label="切换深浅色">◐</button>
+    </header>
+
+    <article class="article" id="article">
+%%CONTENT%%
+    </article>
+
+    %%PAGER%%
+
+    <footer class="foot">
+      <p>内容转换自 <a href="https://github.com/datawhalechina/happy-llm" target="_blank" rel="noopener">Datawhale《Happy-LLM》</a>（CC BY-NC-SA 4.0），
+      仅供个人非商业学习；公式与代码经过口语化处理，精确表达请以原文为准。</p>
+    </footer>
+  </main>
+</div>
+
+<div class="readerbar" id="readerbar" role="region" aria-label="朗读控制">
+  <button class="rb-btn" id="rb-prev" title="上一句（←）">⏮</button>
+  <button class="rb-btn rb-play" id="rb-play" title="播放 / 暂停（空格）">▶</button>
+  <button class="rb-btn" id="rb-next" title="下一句（→）">⏭</button>
+  <button class="rb-btn" id="rb-restart" title="回到开头">↺</button>
+  <div class="rb-progress">
+    <div class="rb-bar"><i id="rb-fill"></i></div>
+    <span class="rb-info" id="rb-info">点击 ▶ 开始朗读</span>
+  </div>
+  <label class="rb-field" title="语速">⚡
+    <select id="rb-rate">
+      <option value="0.6">0.6×</option>
+      <option value="0.8">0.8×</option>
+      <option value="1" selected>1.0×</option>
+      <option value="1.2">1.2×</option>
+      <option value="1.5">1.5×</option>
+      <option value="1.8">1.8×</option>
+      <option value="2.2">2.2×</option>
+    </select>
+  </label>
+  <label class="rb-field" title="音色">🎙
+    <select id="rb-voice"><option>加载音色…</option></select>
+  </label>
+  <label class="rb-auto" title="读完本页后自动打开下一章"><input type="checkbox" id="rb-auto">连播</label>
+  <button class="rb-btn rb-close" id="rb-close" title="收起工具条">✕</button>
+</div>
+<button class="reader-chip" id="reader-chip" hidden>▶ 开始朗读</button>
+<div class="toast" id="toast" hidden></div>
+<div class="sidebar-mask" id="sidebar-mask" hidden></div>
+
+<script src="%%ROOT%%assets/app.js"></script>
+</body>
+</html>

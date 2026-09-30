@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy-LLM 语音版 · 适合网页 TTS 的在线文档</title>
+<meta name="description" content="把 Datawhale《Happy-LLM：从零开始的大语言模型》教程转换成适合浏览器 TTS 朗读的在线文档：代码块自动跳过、公式口语化、表格线性化、逐句高亮、记忆进度。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html">
+      <span class="brand-ico">🎧</span>
+      <span class="brand-txt"><b>Happy-LLM</b><i>语音版 · TTS Friendly</i></span>
+    </a>
+    <nav class="nav">
+<div class="nav-group">开始之前</div>
+<a class="nav-link" href="preface.html">前言</a>
+<a class="nav-link" href="setup.html">学习与环境准备</a>
+<div class="nav-group">正文</div>
+<a class="nav-link" href="chapter1.html">第一章 NLP 基础概念</a>
+<a class="nav-link" href="chapter2.html">第二章 Transformer 架构</a>
+<a class="nav-link" href="chapter3.html">第三章 预训练语言模型</a>
+<a class="nav-link" href="chapter4.html">第四章 大语言模型</a>
+<a class="nav-link" href="chapter5.html">第五章 动手搭建大模型</a>
+<a class="nav-link" href="chapter6.html">第六章 大模型训练流程实践</a>
+<a class="nav-link" href="chapter7.html">第七章 大模型应用</a>
+<a class="nav-link" href="chapter8.html">第八章 大模型强化学习</a>
+<div class="nav-group">附录</div>
+<a class="nav-link" href="chapter6-notes.html">第六章 实践说明</a>
+<a class="nav-link" href="chapter6-alignment.html">第六章 偏好对齐（WIP）</a>
+</nav>
+    <div class="side-foot">
+      <a href="https://github.com/datawhalechina/happy-llm" target="_blank" rel="noopener">原书仓库 ↗</a>
+      <a href="https://github.com/nongsia/hello-llm-tts" target="_blank" rel="noopener">本项目 ↗</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menu-btn" aria-label="打开目录">☰</button>
+      <div class="crumb">Happy-LLM · 语音版</div>
+      <button class="icon-btn" id="theme-btn" aria-label="切换深浅色">◐</button>
+    </header>
+
+    <article class="article home">
+      <section class="hero">
+        <h1>🎧 《Happy-LLM》语音版</h1>
+        <p class="lead">把 Datawhale 开源教程《Happy-LLM：从零开始的大语言模型》全书 8 章
+        转换成<b>适合浏览器 TTS 朗读</b>的在线文档——像听播客一样“读”完一本书，
+        也可以随时回到文字对照公式与代码。</p>
+        <div class="hero-stats">全书朗读约 <b>381</b> 分钟 · 无需安装任何插件，点开即听</div>
+        <ol class="howto">
+          <li>进入任意章节，点击底部工具条的 <b>▶</b> 开始朗读；</li>
+          <li>正在朗读的句子会<b>自动高亮并跟随滚动</b>，空格键可暂停 / 继续；</li>
+          <li>用 <b>⚡</b> 调语速、<b>🎙</b> 换音色（推荐 Edge 浏览器的中文在线音色）；</li>
+          <li>代码块朗读时<b>自动跳过</b>，公式读作口语（如“西格玛等于求和……”），进度自动记忆。</li>
+        </ol>
+      </section>
+
+      <section class="cards">
+<a class="card" href="preface.html"><span class="card-group">开始之前</span><b class="card-title">前言</b><span class="card-desc">2022年底，ChatGPT 的横空出世改变了人们对人工智能的认知，也给自然语言处理（Natural Language Process，NLP）…</span><span class="card-time">🎧 约 8 分钟</span></a>
+<a class="card" href="setup.html"><span class="card-group">开始之前</span><b class="card-title">学习与环境准备</b><span class="card-desc">Happy-LLM 以教程阅读为主、代码实践为辅。为了降低环境冲突，建议读者按照章节分别准备依赖，而不是在同一个环境中安装全部依赖。 第八章使用…</span><span class="card-time">🎧 约 9 分钟</span></a>
+<a class="card" href="chapter1.html"><span class="card-group">正文</span><b class="card-title">第一章 NLP 基础概念</b><span class="card-desc">自然语言处理（Natural Language Processing，NLP）作为人工智能领域的一个重要分支，旨在使计算机能够理解和处理人类语言…</span><span class="card-time">🎧 约 28 分钟</span></a>
+<a class="card" href="chapter2.html"><span class="card-group">正文</span><b class="card-title">第二章 Transformer 架构</b><span class="card-desc">2.1 注意力机制 2.1.1 什么是注意力机制 随着 NLP 从统计机器学习向深度学习迈进，作为 NLP 核心问题的文本表示方法也逐渐从统计学…</span><span class="card-time">🎧 约 43 分钟</span></a>
+<a class="card" href="chapter3.html"><span class="card-group">正文</span><b class="card-title">第三章 预训练语言模型</b><span class="card-desc">3.1 Encoder-only PLM 在上一章，我们详细讲解了给 NLP 领域带来巨大变革注意力机制以及使用注意力机制搭建的模型 Trans…</span><span class="card-time">🎧 约 71 分钟</span></a>
+<a class="card" href="chapter4.html"><span class="card-group">正文</span><b class="card-title">第四章 大语言模型</b><span class="card-desc">4.1 什么是 LLM 在前三章，我们从 NLP 的定义与主要任务出发，介绍了引发 NLP 领域重大变革的核心思想——注意力机制与 Transf…</span><span class="card-time">🎧 约 52 分钟</span></a>
+<a class="card" href="chapter5.html"><span class="card-group">正文</span><b class="card-title">第五章 动手搭建大模型</b><span class="card-desc">5.1 动手实现一个 LLaMA2 大模型 Meta（原Facebook）于2023年2月发布第一款基于Transformer结构的大型语言模型…</span><span class="card-time">🎧 约 24 分钟</span></a>
+<a class="card" href="chapter6.html"><span class="card-group">正文</span><b class="card-title">第六章 大模型训练流程实践</b><span class="card-desc">第五章中，我们从零开始动手搭建了 LLaMA2 模型，并完整实现了其预训练和微调的全流程。在本章中，我们将深入探讨大模型的训练流程实践，重点介绍…</span><span class="card-time">🎧 约 34 分钟</span></a>
+<a class="card" href="chapter7.html"><span class="card-group">正文</span><b class="card-title">第七章 大模型应用</b><span class="card-desc">在前面的章节中，我们系统地介绍了大模型的基础知识、训练方法和微调技术。本章将重点探讨大模型在实际应用中的关键技术和框架，涵盖大模型评测、RAG（…</span><span class="card-time">🎧 约 25 分钟</span></a>
+<a class="card" href="chapter8.html"><span class="card-group">正文</span><b class="card-title">第八章 大模型强化学习</b><span class="card-desc">在第四章中，我们从人类反馈强化学习（Reinforcement Learning from Human Feedback，RLHF）出发，介绍了…</span><span class="card-time">🎧 约 72 分钟</span></a>
+<a class="card" href="chapter6-notes.html"><span class="card-group">附录</span><b class="card-title">第六章 实践说明</b><span class="card-desc">第六章聚焦如何基于 Transformers 生态完成大模型训练实践，正文主线为 Pretrain、SFT 与 PEFT 三部分，适合作为从手写…</span><span class="card-time">🎧 约 3 分钟</span></a>
+<a class="card" href="chapter6-alignment.html"><span class="card-group">附录</span><b class="card-title">第六章 偏好对齐（WIP）</b><span class="card-desc">在我们进入强化学习的细节之前，让我们先看看它的起源。强化学习（Reinforcement Learning，简称RL）其实并不是什么新鲜事物。它…</span><span class="card-time">🎧 约 12 分钟</span></a>
+      </section>
+
+      <section class="notes">
+        <h2>转换说明</h2>
+        <ul>
+          <li><b>代码块</b>：折叠为可展开面板，朗读自动跳过，视觉上保留全部代码；</li>
+          <li><b>数学公式</b>：页面显示 Unicode 符号版，朗读时转为口语（α 读“阿尔法”、Σ 读“求和”、上标 T 读“的转置”）；</li>
+          <li><b>表格</b>：保留表格外观，朗读时按“第 N 行：列名 为 值”线性化；</li>
+          <li><b>图片</b>：保留原书配图，朗读时只读图注；</li>
+          <li><b>进度</b>：每页朗读位置本地记忆，可勾选“连播”自动进入下一章。</li>
+        </ul>
+        <p class="license-note">原书采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+        协议，本项目同样以该协议分享，仅供非商业学习使用。朗读效果取决于系统 TTS 引擎，
+        推荐 Edge / Chrome + 中文语音包。</p>
+      </section>
+    </article>
+
+    <footer class="foot">
+      <p>内容转换自 <a href="https://github.com/datawhalechina/happy-llm" target="_blank" rel="noopener">Datawhale《Happy-LLM》</a>（CC BY-NC-SA 4.0），
+      仅供个人非商业学习。</p>
+    </footer>
+  </main>
+</div>
+<div class="sidebar-mask" id="sidebar-mask" hidden></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
