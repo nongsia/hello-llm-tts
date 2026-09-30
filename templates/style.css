@@ -105,11 +105,17 @@ html[data-theme="dark"] .nav-link.active { color: #10201c; }
 }
 
 /* 逐句朗读 span */
-.article .s { border-radius: 4px; }
+.article .s { border-radius: 4px; cursor: pointer; }
+.article .s:hover { background: color-mix(in srgb, var(--hl) 40%, transparent); }
 .article .s.reading, .article .s-virtual.reading {
   background: var(--hl); box-shadow: 0 0 0 3px var(--hl);
 }
 html[data-theme="dark"] .article .s.reading, html[data-theme="dark"] .article .s-virtual.reading { color: #f4efe2; }
+.article [data-tts] { cursor: pointer; border-radius: 8px; }
+.article .table-wrap:hover, .article .f-display:hover {
+  outline: 2px dashed color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 3px;
+}
 
 /* 目录 */
 .toc { margin: 10px 0 4px; }

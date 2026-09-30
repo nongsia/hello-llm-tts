@@ -116,6 +116,11 @@
   var voices = [];
   var lastStart = 0;
 
+  /* 点击句子/公式/表格 → 从该处开始朗读（元素记录自己的首个分段号） */
+  segments.forEach(function (seg, i) {
+    if (seg.el && seg.el._hltSeg === undefined) seg.el._hltSeg = i;
+  });
+
   var savedPos = parseInt(store.get(POSKEY, "0"), 10) || 0;
   if (savedPos >= segments.length) savedPos = 0;
   idx = savedPos;
@@ -227,6 +232,21 @@
   chip.addEventListener("click", function () {
     chip.hidden = true;
     bar.style.display = "";
+  });
+
+  /* 点击任意句子跳转朗读；选中文字或点链接时不劫持 */
+  article.addEventListener("click", function (e) {
+    var sel = window.getSelection && window.getSelection();
+    if (sel && !sel.isCollapsed && String(sel)) return;
+    var t = e.target && e.target.closest ? e.target.closest(".s, [data-tts]") : null;
+    if (!t || !article.contains(t)) return;
+    if (t.closest("a[href]")) return;
+    var i = t._hltSeg;
+    if (i === undefined) return;
+    savedPos = i;
+    store.set(POSKEY, String(i));
+    start(i);
+    toast("从第 " + (i + 1) + " 句开始朗读");
   });
 
   rateSel.value = store.get("hlt:rate", "1");
